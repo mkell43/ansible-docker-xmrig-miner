@@ -15,10 +15,10 @@ Role Variables
 
 All of these variables ***must*** be set.
 
-* `monero_pool_url` - The url to your monero pool.
-* `monero_pool_username` - The username you use to log into your monero pool.
-* `monero_pool_password` - The password for that username.
-* `monero_donate_level` - The level to donate back to the xmrig devs.
+* `xmrig_pool_url` - The url to your monero pool.
+* `xmrig_pool_username` - The username you use to log into your monero pool.
+* `xmrig_pool_password` - The password for that username.
+* `xmrig_donate_level` - The level to donate back to the xmrig devs.
 
 For more information on those settings please see the xmrig documentation: https://github.com/xmrig/xmrig#usage.
 
