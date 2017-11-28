@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Mike Keller
+  description: docker-xmrig-miner
+
+  license: license (MIT)
+
+  min_ansible_version: 2.4
+
+  platforms:
+   - name: Ubuntu
+     versions:
+     - xenial
+
+  galaxy_tags:
+    - monero

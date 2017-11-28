@@ -1,0 +1,22 @@
+---
+- name: Make sure pip exists.
+  apt:
+    name: python-pip
+    state: present
+- name: Install required python packages.
+  pip:
+    executable: /usr/bin/pip
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - setuptools
+    - pip
+    - wheel
+    - docker
+- name: Start cpu mining.
+  docker_container:
+    name: xmrig-docker
+    image: mkell43/xmrig-cpu
+    restart_policy: unless-stopped
+    command: "-o {{ xmrig_pool_url }} -u {{ xmrig_pool_username }} -p {{ xmrig_pool_password }} --donate-level={{ xmrig_donate_level }}"
+    state: started
